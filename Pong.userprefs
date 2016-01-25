@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="Pong/Pong.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Pong/Bar.cs">
+    <Files>
+      <File FileName="Pong/Program.cs" Line="12" Column="52" />
+      <File FileName="Pong/Bar.cs" Line="146" Column="38" />
+      <File FileName="Pong/Ball.cs" Line="113" Column="30" />
+      <File FileName="Pong/Ring.cs" Line="62" Column="70" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
