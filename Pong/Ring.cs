@@ -57,6 +57,13 @@ namespace Pong
 			this.DrawRectFilled (window, 10, 10, 255, 255, 255, window.width-20, 10);
 			//Disegno parte inferiore del Ring
 			this.DrawRectFilled (window, 10, window.height-20, 255, 255, 255, window.width-20, 10);
+			//Disegno righe tratteggiate che separano il ring
+			int k = 20;
+			while(k < window.height-20)
+			{
+				this.DrawRectFilled(window, window.width/2, k, 255, 255, 255, 7, 30);
+				k += 40;
+			}
 			//Disegno la Palla
 			//this.DrawRectFilled (window, ball.GetX(), ball.GetY(), ball.GetR(), ball.GetG(), ball.GetB(), ball.GetWidht(), ball.GetHeight());
 			this.DrawCircle(window, ball.GetX(), ball.GetY(), ball.GetRaggio(), 255, 255, 255);
@@ -74,7 +81,7 @@ namespace Pong
 
 		public void DrawCircle(Window window, int j, int k, int radius, byte r, byte g, byte b)
 		{
-			for (int x = -radius; x < radius; x++)
+			for (int x = - radius; x < radius; x++)
 			{
 				int height = (int)Math.Sqrt(radius * radius - x * x);
 

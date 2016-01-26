@@ -7,8 +7,8 @@ namespace Pong
 		private int x;
 		private int y;
 		private int raggio;
-		private const int speedX = 1;
-		private const int speedY = 1;
+		private const int speedX = 6;
+		private const int speedY = 6;
 		private int direzioneX = 1;
 		private int direzioneY = 1;
 		private byte r;
@@ -16,9 +16,9 @@ namespace Pong
 		private byte b;
 		public Ball ()
 		{
-			this.x = 100;
-			this.y = 100;
-			this.raggio = 60;
+			this.x = 600;
+			this.y = 600;
+			this.raggio = 15;
 		}
 
 		public int GetX()
@@ -110,7 +110,7 @@ namespace Pong
 		}
 		public void Update(int hRing, int wRing)
 		{
-			if((this.y >= hRing - 20 -raggio*2) || (this.y <= 20+raggio))
+			if((this.y >= hRing -raggio - 17) || (this.y <= 20+raggio))
 				direzioneY *= -1;
 			this.x = this.x + (speedX*direzioneX);
 			this.y = this.y + (speedY*direzioneY);

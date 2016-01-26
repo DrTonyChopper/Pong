@@ -90,13 +90,15 @@ namespace Pong
 
 			//Controllo pe non superare il bordo superiore
 			if (this.y <= 14)
-				this.y += this.speed;
-			//Controllo pe non superare il bordo inferiore
-			if (this.y >= window.height-this.height-15)
-				this.y -= this.speed;
+				this.y = 20;
+			//Controllo per non superare il bordo inferiore
+			if (this.y >= window.height-this.height-17)
+				this.y = window.height - this.height-20;
+
+			//int distance = (int)(ball.GetRaggio() *  26.67)/100;
 
 			//Controllo il punto della barra in cui è avvenuto il contatto con la pallina per far cambiare l'angolazione del tiro 
-			if ((ball.GetX () >= this.x - 15) && (ball.GetY () >= this.y) && (ball.GetY () <= this.y + this.height)) 
+			if ((ball.GetX () + ball.GetRaggio()-17 >= this.x - 15) && (ball.GetY () >= this.y) && (ball.GetY () <= this.y + this.height)) 
 			{
 				ball.SetDirezioneX (ball.GetDirezioneX () * -1);
 				ball.SetR(255);
@@ -137,13 +139,16 @@ namespace Pong
 			}
 			//Controllo per non superare il bordo superiore
 			if (this.y <= 14)
-				this.y += this.speed;
+				this.y = 20;
+			
 			//Controllo per non superare il bordo inferiore
 			if (this.y >= h-this.height-17)
-				this.y -= this.speed;
+				this.y = window.height - this.height-20;
+
+
 
 			//Controllo il punto della barra in cui è avvenuto il contatto con la pallina per far cambiare l'angolazione del tiro
-			if ((ball.GetX ()+ball.GetRaggio()*2 <= this.x+15) && (ball.GetY () >= this.y) && (ball.GetY () <= this.y + this.height)) 
+			if ((ball.GetX ()-ball.GetRaggio() <= this.x+15) && (ball.GetY () >= this.y) && (ball.GetY () <= this.y + this.height)) 
 			{
 				ball.SetDirezioneX (ball.GetDirezioneX () * -1);
 				ball.SetR(0);
