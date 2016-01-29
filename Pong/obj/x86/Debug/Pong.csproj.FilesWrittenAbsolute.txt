@@ -6,3 +6,11 @@
 /Users/remoorlandini/Desktop/Lavori AIV/Pong/Pong/bin/Debug/OpenTK.dll
 /Users/remoorlandini/Desktop/Lavori AIV/Pong/Pong/bin/Debug/AivDrawOpenGL.dll
 /Users/remoorlandini/Desktop/Lavori AIV/Pong/Pong/bin/Debug/aiv-fast2d.dll
+/Users/remoorlandini/Desktop/Lavori AIV/GENNAIO/Pong/Pong/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/remoorlandini/Desktop/Lavori AIV/GENNAIO/Pong/Pong/bin/Debug/Pong.exe.mdb
+/Users/remoorlandini/Desktop/Lavori AIV/GENNAIO/Pong/Pong/bin/Debug/Pong.exe
+/Users/remoorlandini/Desktop/Lavori AIV/GENNAIO/Pong/Pong/obj/x86/Debug/Pong.exe
+/Users/remoorlandini/Desktop/Lavori AIV/GENNAIO/Pong/Pong/obj/x86/Debug/Pong.exe.mdb
+/Users/remoorlandini/Desktop/Lavori AIV/GENNAIO/Pong/Pong/bin/Debug/OpenTK.dll
+/Users/remoorlandini/Desktop/Lavori AIV/GENNAIO/Pong/Pong/bin/Debug/AivDrawOpenGL.dll
+/Users/remoorlandini/Desktop/Lavori AIV/GENNAIO/Pong/Pong/bin/Debug/aiv-fast2d.dll

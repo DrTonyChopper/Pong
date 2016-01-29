@@ -7,8 +7,8 @@ namespace Pong
 		private int x;
 		private int y;
 		private int raggio;
-		private const int speedX = 6;
-		private const int speedY = 6;
+		private const int speedX = 10;
+		private const int speedY = 10;
 		private int direzioneX = 1;
 		private int direzioneY = 1;
 		private byte r;

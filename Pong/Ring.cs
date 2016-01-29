@@ -8,10 +8,18 @@ namespace Pong
 		// ring's dimensions
 		private const int ringWight = 900;
 		private const int ringHeight = 700;
+		private ResultNumber numb1;
+		private ResultNumber numb2;
+		private ResultNumber numb3;
+		private ResultNumber numb4;
+		//private ResultNumber numb3;
 
-
-		public Ring ()
+		public Ring (Window window)
 		{
+			numb1 = new ResultNumber (window.width/2 - 170, 30, true );
+			numb2 = new ResultNumber (window.width/2 - 100, 30, true );
+			numb3 = new ResultNumber (window.width/2+5, 28, true );
+			numb4 = new ResultNumber (window.width / 2+5, 28, false );
 		}
 
 		public void Clear(Window window, byte r, byte g, byte b)
@@ -41,7 +49,7 @@ namespace Pong
 			}
 		}
 
-		public void PutPixel (Window window, int x, int y, byte r, byte g, byte b)
+		public static void PutPixel (Window window, int x, int y, byte r, byte g, byte b)
 		{
 			if (x < 0 || x > window.width - 1 || y < 0 || y > window.height - 1)
 				return;
@@ -77,6 +85,14 @@ namespace Pong
 			bar2.Move2 (window, ball, window.height);
 			//Movimeto della Palla
 			ball.Update (window.height, window.width);
+
+			numb1.CurrentResultDec (window, bar1.GetPoints());
+
+			numb2.CurrentResult (window, bar1.GetPoints());
+
+			numb3.CurrentResultDec (window, bar2.GetPoints());
+
+			numb4.CurrentResult (window, bar2.GetPoints());
 		}
 
 		public void DrawCircle(Window window, int j, int k, int radius, byte r, byte g, byte b)
@@ -89,6 +105,24 @@ namespace Pong
 				{
 					//if (y == -height || y == height - 1 || x == -radius || x == radius - 1)
 					PutPixel(window, x + j, y + k, r, g, b);
+				}
+			}
+		}
+
+		public static void DrawSprite(Window window, Sprite sprite, int xpos, int ypos, int xoffset, int yoffset, int width, int height)
+		{
+			for (int y = yoffset; y < yoffset + height; y++)
+			{
+				for (int x = xoffset; x < xoffset + width; x++)
+				{
+					int position = (y * sprite.width * 4) + (x * 4);
+					byte r = sprite.bitmap[position];
+					byte g = sprite.bitmap[position + 1];
+					byte b = sprite.bitmap[position + 2];
+					byte a = sprite.bitmap[position + 3];
+
+					if (a == 255)
+						PutPixel(window, xpos + x - xoffset, ypos + y - yoffset, r, g, b);
 				}
 			}
 		}
