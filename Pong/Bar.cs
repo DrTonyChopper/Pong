@@ -120,11 +120,6 @@ namespace Pong
 				points++;
 				ball.SetX (window.width/2);
 				ball.SetY (window.height/2);
-				if (RandomGenerator.GetRandom (0, 1) == 0)
-					ball.SetDirezioneX (-1);
-				else ball.SetDirezioneX (1);
-				ball.SetDirezioneY (RandomGenerator.GetRandom (-2, 2));
-
 			}
 				
 
@@ -178,10 +173,6 @@ namespace Pong
 				points++;
 				ball.SetX (window.width/2);
 				ball.SetY (window.height/2);
-				if (RandomGenerator.GetRandom (0, 1) == 0)
-					ball.SetDirezioneX (-1);
-				else ball.SetDirezioneX (1);
-				ball.SetDirezioneY (RandomGenerator.GetRandom (-2, 2));
 			}
 		}
 	}

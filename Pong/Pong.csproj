@@ -47,8 +47,6 @@
     <Compile Include="Bar.cs" />
     <Compile Include="Ball.cs" />
     <Compile Include="Ring.cs" />
-    <Compile Include="RandomGenerator.cs" />
-    <Compile Include="ResultNumber.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
